@@ -1,0 +1,358 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 500px;
+  margin: 0 auto;
+  display: block;
+}
+
+h2 {
+  text-align: center;
+  z-index: 999;
+}
+
+
+#header {
+  position: fixed;
+  z-index: 9999;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: none;
+  color: black;
+  text-align: center;
+  background: white;
+}
+
+.post {
+  border-radius: 3px;
+  margin: 15px 0px;
+}
+
+.hideBtn {
+  display: none;
+}
+
+.btn-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.donate-btn {
+  width: 35px !important;
+  position: absolute !important;
+  right: 10px !important;
+
+}
+
+#loginBtn {
+  margin-top: 80%;
+  padding: 50px;
+}
+
+#loginBtn button {
+  padding: 16px;
+  border: 3px solid;
+  font-weight: bold;
+}
+
+#loginBtn .login-btn-img {
+  width: 27px;
+  margin-left: 21px;
+}
+
+.donate-btn img {
+  width: 100%;
+}
+
+.video-container {
+  height: 100%;
+  width: 450px;
+  position: relative;
+  top: 4em;
+  display: flex;
+  justify-content: center;
+  margin-top: -4em;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  min-width: 60%;
+
+}
+
+
+h1 {
+  text-align: center;
+  z-index: 999;
+}
+
+#play-btn {
+  position: absolute;
+  top: 18em;
+  height: 100px;
+  display: none;
+}
+
+#heart {
+  position: absolute;
+  color: white;
+  font-size: 45px;
+
+  cursor: pointer;
+}
+
+#heart2 {
+  position: absolute;
+  top: 18em;
+  font-size: 45px;
+  top: 16.5em;
+  left: 9.6em;
+  display: none;
+  color: white;
+}
+
+#btns {
+  position: absolute;
+  left: 83%;
+  top: 55%;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+}
+
+#icons {
+  color: white;
+}
+
+h1 {
+  z-index: 7;
+  position: absolute;
+  font-size: 0.9em;
+  top: 90%;
+  color: white;
+  text-align: left;
+}
+
+/* 
+#logo {
+  position: fixed;
+  height: 21px;
+  left: 10px;
+  top: -5px;
+  font-size: 15px;
+  text-shadow: 2px 2px #e70909, -3px -3px 2.4px #2bc5e0;
+} */
+
+/* #loading {
+  color: white;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 18em;
+} */
+
+/* #title {
+  z-index: 9999;
+  position: relative;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  left: 1em;
+  bottom: 3.7em;
+  font-size: 0.9em;
+} */
+
+#like-count {
+  color: white;
+  position: absolute;
+  text-align: justify;
+  bottom: -1em;
+  left: 1.75em;
+}
+
+#author {
+  text-decoration: underline;
+  position: relative;
+  margin: 0px;
+  font-size: 1em;
+  z-index: 9999;
+  color: white;
+  text-transform: lowercase;
+  font-family: "Roboto", sans-serif;
+  left: 1em;
+  bottom: 3em;
+  letter-spacing: 0.8px;
+  font-weight: bolder;
+}
+
+#btns {
+  display: flex;
+  justify-content: center;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
+}
+
+#menu {
+  position: absolute;
+  bottom: 0px;
+  height: 25px;
+  background: red;
+  width: 100%;
+  z-index: 999;
+}
+
+.liked-404{
+  text-align: center;
+  font-size:26px;
+}
+
+.liked-404 a{
+  font-size:40px;
+}
+
+#menu .menu-btn {
+  float: left;
+  padding: 0px 5px;
+
+}
+
+.cmtUid {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.cmtContent {
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+a {
+  text-decoration: none !important;
+  color: unset !important;
+}
+
+@media only screen and (max-width: 550px) {
+
+
+  #author-title {
+    top: 78%;
+  }
+
+  #btns {
+    top: 55%;
+  }
+}
+
+video {
+  border-radius: 0;
+  width: 100%;
+  text-align: center;
+  background: #fff;
+}
+
+.upload-section {
+  margin-bottom: 15px;
+}
+
+
+.comment-wrapper,
+.MuiDrawer-paperAnchorBottom,
+.comment-post {
+  max-width: 750px;
+  margin: 0 auto;
+  display: block;
+  padding-bottom: 50px;
+}
+
+.logo-img{
+  max-width: 30px;
+  padding-right: 5px;
+}
+#body {
+  padding-top: 75px;
+  padding-bottom: 75px;
+  max-width: 500px;
+}
+
+.post .MuiCardHeader-title {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.post .MuiCardHeader-subheader {
+  font-size: 11px;
+}
+
+.post .MuiCardContent-root .MuiTypography-body2 {
+  font-size: 15px;
+  margin: 0px;
+
+}
+
+
+/* single post  */
+#single-page .post .MuiPaper-root.MuiPaper-outlined {
+  border: none !important;
+
+}
+
+#single-page .single-comment-input {
+  margin-bottom: 0px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
+.share-btn {
+  position: absolute;
+  left: 115px;
+  bottom: 5px;
+}
+
+.share-btn>div>button.MuiButtonBase-root.MuiFab-root {
+  box-shadow: none !important;
+  background: none;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+
+.home-share-btn .share-btn {
+  left:80px;
+}
+
+.comments-section #loginBtn {
+  padding:0;
+  margin-top:15px;
+  text-align:center;
+  transform:scale(0.6);
+  
+}
+
+.comments-section #loginBtn button{
+  padding:5px;
+  border:2px solid gray;
+  color:gray;
+  text-transform:unset;
+}
+
+.related-post-title{
+  font-weight: bold;
+}
+
+#body video{
+  min-height: 200px;
+}
+
+.comment-post  button{
+  transform:scale(1.5);
+}
+
+@media screen and ( min-width:800px ){
+  .comments-section #loginBtn button{
+  transform:scale(0.8);
+  }
+}
