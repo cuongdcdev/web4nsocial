@@ -32,7 +32,7 @@ I worked solo on this project, learned how to deploy and write contract for Web4
 
 Video Demo
 ===========
-[[Web4Social](https://www.youtube.com/watch?v=WnOn-FUQ7YA)
+[Web4Social](https://www.youtube.com/watch?v=WnOn-FUQ7YA)
 
 
 
