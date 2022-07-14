@@ -1,17 +1,19 @@
-NSocial - Decentralize social platform  completely on-chain on NEAR Protocol
+
+
+Web4Social - Decentralize social network platform on NEAR Protocol - 100% on-chain
 ==================
 
 
-Why NSocial? 
+Why Web4Social? 
 ===========
 - Decentralize, share what you wants without got restricted 
-- Run fully on-chain of powerful blockchain NEAR Protocol 
--  Share your thought and get tipped with Near  
+- Using Web4 techonogy, 100% on-chain of powerful blockchain NEAR Protocol
+- Share your thought and get tipped with Near  
 - Your data is stored on-chain NEAR , Media files are stored on IPFS!, no one can take your files down! 
 
 Features
 ===========
-- Run completely on-chain on powerful NEAR blockchain
+- Run 100% on-chain on powerful NEAR blockchain using Web4 techonogy
 - Homepage: browse feed
 - Create post: Photo / Text / Media post, your files will be stored on IPFS - no one can take your files down
 - Favorite: Save your favorite posts!
@@ -25,18 +27,18 @@ Features
 Team introduction
 ===========
 
-I worked solo on this project, learned pretty much new things. 
+I worked solo on this project, learned how to deploy and write contract for Web4 and many things
 
 
 Video Demo
 ===========
-[![NSocial](https://i3.ytimg.com/vi/RxcF2_OHn0s/maxresdefault.jpg)](https://www.youtube.com/watch?v=RxcF2_OHn0s)
+[[Web4Social](https://www.youtube.com/watch?v=WnOn-FUQ7YA)
 
 
 
-Be part of NSocial now: 
+Be part of Web4Social now: 
 ===========
-https://nsocial.sctuts.com/
+https://web4social.testnet.page/
 
 Quick Start
 ===========
@@ -88,7 +90,7 @@ Ensure that it's installed with `near --version` (or `npx near --version`)
 Step 1: Create an account for the contract
 ------------------------------------------
 
-Each account on NEAR can have at most one contract deployed to it. If you've already created an account such as `your-name.testnet`, you can deploy your contract to `ntik.your-name.testnet`. Assuming you've already created an account on [NEAR Wallet], here's how to create `ntik.your-name.testnet`:
+Each account on NEAR can have at most one contract deployed to it. If you've already created an account such as `your-name.testnet`, you can deploy your contract to `web4social.your-name.testnet`. Assuming you've already created an account on [NEAR Wallet], here's how to create `web4social.your-name.testnet`:
 
 1. Authorize NEAR CLI, following the commands it gives you:
 
@@ -96,7 +98,7 @@ Each account on NEAR can have at most one contract deployed to it. If you've alr
 
 2. Create a subaccount (replace `YOUR-NAME` below with your actual account name):
 
-      near create-account ntik.YOUR-NAME.testnet --masterAccount YOUR-NAME.testnet
+      near create-account web4social.YOUR-NAME.testnet --masterAccount YOUR-NAME.testnet
 
 
 Step 2: set contract name in code
@@ -104,7 +106,7 @@ Step 2: set contract name in code
 
 Modify the line in `src/config.js` that sets the account name of the contract. Set it to the account id you used above.
 
-    const CONTRACT_NAME = process.env.CONTRACT_NAME || 'ntik.YOUR-NAME.testnet'
+    const CONTRACT_NAME = process.env.CONTRACT_NAME || 'web4social.YOUR-NAME.testnet'
 
 
 Step 3: deploy!
@@ -117,4 +119,4 @@ One command:
 As you can see in `package.json`, this does two things:
 
 1. builds & deploys smart contract to NEAR TestNet
-2. builds & deploys frontend code to GitHub using [gh-pages]. This will only work if the project already has a repository set up on GitHub. Feel free to modify the `deploy` script in `package.json` to deploy elsewhere.
+2. builds & deploys frontend code to GitHub using [gh-pages]. This will only work if the project already has a repository set up on GitHub. Feel free to modify the `deploy` script in `package.json` to deploy elsewhere
