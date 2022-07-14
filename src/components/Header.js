@@ -2,17 +2,9 @@ import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
-import nearimg from "../assets/img/nearicon.png";
+import { NEAR_ICON_IMG } from '../utils';
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', '<b style="color:red">Logout</b>'];
@@ -38,7 +30,7 @@ const Header = () => {
                     <Box sx={{ flexGrow: 1 }}>
 
                     </Box>
-                    <img src={nearimg} className="logo-img" />
+                    <img src={NEAR_ICON_IMG} className="logo-img" />
                     <Typography
                         variant="h5"
                         noWrap
@@ -57,7 +49,7 @@ const Header = () => {
                         }}
                     >
                         <a href="/">
-                            Social</a>
+                            W4Social </a>
                     </Typography>
 
 

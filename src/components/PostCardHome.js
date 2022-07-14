@@ -16,10 +16,11 @@ import { Drawer, InputBase } from "@mui/material";
 import { Close } from "@mui/icons-material";
 import { AddCircle } from "@mui/icons-material";
 import { v4 as uuid } from "uuid";
-import neariconimg from "../assets/img/nearicon.png";
 import DonateBox from "./DonateBox";
 import ShareBtn from "./ShareBtn";
 import { toggleFavorite, isFavorite } from "../utils";
+
+import { NEAR_ICON_IMG } from "../utils";
 
 // import ReactWebMediaPlayer from 'react-web-media-player';
 
@@ -54,14 +55,14 @@ export default function PostCardHome(props) {
         setCmts(props.cmts);
         setPost(props.post);
         console.log("posts ", props.post, props.cmts);
-        setFav( isFavorite(props.post.id) ? true : false );
+        setFav(isFavorite(props.post.id) ? true : false);
     }, []);
 
     function postThumbnail() {
-        if( post.type  && !post.media ){
+        if (post.type && !post.media) {
             return (<></>);
         }
-        
+
         if (post.type == "basic") {
             return (
                 <CardMedia
@@ -117,7 +118,7 @@ export default function PostCardHome(props) {
 
     return (
 
-        <Card variant="outlined" sx={{ maxWidth: "auto" }}>
+        <Card variant="outlined" sx={{ maxWidth: "auto" }} >
             <CardHeader
                 avatar={
                     <a href={`/@${post.author}`} title={post.author}>
@@ -126,16 +127,28 @@ export default function PostCardHome(props) {
                         </Avatar>
                     </a>
                 }
-                title={<a href={`/@${post.author}/p${post.id}`}>{post.title}</a>}
+                title={ <a href={`/@${post.author}`}>{post.author}</a>}
                 subheader={getDateFromTimeStamp(post.date)}
             />
-            {postThumbnail()}
+
+            <a href={`/@${post.author}/p${post.id}`} className="post-home-thumbnail">
+                {postThumbnail()}
+            </a>
 
             <CardContent>
+
                 <Typography variant="body2" color="text.secondary">
                     <a href={`/@${post.author}/p${post.id}`} >
-                        {post.desc}
+                        <div class="post-home-title">
+                            {post.title}
+                        </div>
                     </a>
+                </Typography>
+
+                <Typography variant="body2" color="text.secondary">
+                    <div class="post-home-desc">
+                        {post.desc}
+                    </div>
                 </Typography>
             </CardContent>
 
@@ -156,7 +169,7 @@ export default function PostCardHome(props) {
                 </IconButton>
 
                 <IconButton className="donate-btn" aria-label="donate" onClick={openDonateSection}>
-                    <img src={neariconimg} />
+                    <img src={NEAR_ICON_IMG} />
                 </IconButton>
             </CardActions>
             {/* donate section   */}

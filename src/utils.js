@@ -4,6 +4,8 @@ import getConfig from './config'
 // const nearConfig = getConfig(process.env.NODE_ENV || 'development')
 const nearConfig = getConfig('development')
 
+export const NEAR_ICON_IMG = "https://gfs.sctuts.com/asset/nearicon.png";
+
 // Initialize contract & set global variables
 export async function initContract() {
   // Initialize connection to the NEAR testnet

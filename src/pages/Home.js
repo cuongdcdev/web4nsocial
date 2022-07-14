@@ -1,14 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "../assets/css/app.css";
-
-
-import cx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import PostCardHome from "../components/PostCardHome";
-
-
-// const { networkId } = getConfig(process.env.NODE_ENV || 'development')
-
+import { TransitionGroup } from 'react-transition-group';
 
 
 function Home() {
@@ -29,7 +23,7 @@ function Home() {
                 console.log(err);
             })
 
-            window.document.title = "NSocial"
+        window.document.title = "NSocial"
     }, []);
 
     useEffect(() => {
@@ -38,9 +32,12 @@ function Home() {
             const pid = pidaccid.split("|")[1];
             if (accid && pid)
                 window.contract.getPost({ accountId: accid, postId: pid }).then(ob => {
-                    console.log("got 1 post ", ob);
-                    setPosts(posts => [JSON.parse(ob), ...posts]);
-                    console.log("posts now ", posts);
+                    if (ob) {
+                        console.log("got 1 post ", ob);
+                        setPosts(posts => [JSON.parse(ob), ...posts]);
+                        console.log("posts now ", posts);
+                    }
+
                 })
         });
     }, [postIds])
@@ -60,16 +57,18 @@ function Home() {
 
 
     return (
-        <div id="home-page">
-            {
-                posts.map(e => (
-                    <div className="post" key={Math.random()}>
-                        <PostCardHome post={e} cmts={[]} />
-                    </div>
-                ))
-            }
+        <TransitionGroup>
+            <div id="home-page">
+                {
+                    posts.map(e => (
+                        <div className="post" key={Math.random()}>
+                            <PostCardHome post={e} cmts={[]} />
+                        </div>
+                    ))
+                }
+            </div>
+        </TransitionGroup>
 
-        </div>
     );
 }
 

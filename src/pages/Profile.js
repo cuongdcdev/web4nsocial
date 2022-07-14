@@ -86,7 +86,6 @@ export default function Profile() {
 
     return (
         <>
-
             <h2 className="heading">
                 {params.walletid} <br />
                 {showLogout()}
@@ -97,7 +96,7 @@ export default function Profile() {
 
                 <TextField id="name" label="Name" variant="standard" InputProps={{ readOnly: true }}
                     sx={{ width: "100%" }}
-                    defaultValue={window.accountId} />
+                    defaultValue={params.walletid ? params.walletid : window.accountId} />
 
                 <TextField id="description" hiddenLabel
                     InputProps={{ readOnly: params.walletid == window.accountId }}

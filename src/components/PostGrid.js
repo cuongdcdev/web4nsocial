@@ -2,8 +2,9 @@ import * as React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
-import defaultImg from "../assets/img/nearicon.png";
+import { NEAR_ICON_IMG } from '../utils';
 import { v4 as uuid } from 'uuid';
+
 export default function PostGrid(props) {
     const itemData = props.posts;
 
@@ -18,8 +19,8 @@ export default function PostGrid(props) {
         if(item && item.type == "basic"){
             return (
                 <img
-                    src={`${item.media ? item.media : defaultImg}?w=248&fit=crop&auto=format`}
-                    srcSet={`${item.media ? item.media : defaultImg}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                    src={`${item.media ? item.media : NEAR_ICON_IMG}?w=248&fit=crop&auto=format`}
+                    srcSet={`${item.media ? item.media : NEAR_ICON_IMG}?w=248&fit=crop&auto=format&dpr=2 2x`}
                     alt={item.title}
                     loading="lazy"
                 />
@@ -36,7 +37,7 @@ export default function PostGrid(props) {
 
                     <a href={`/@${item.author}/p${item.id}`} >
                         <ImageListItemBar
-                            title={item.title}
+                            title={<b>{item.title}</b>}
                             subtitle={<span>by: {item.author}</span>}
                             position="below"
                         />

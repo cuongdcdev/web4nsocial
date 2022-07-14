@@ -5,7 +5,6 @@ import { login, logout } from './utils'
 import getConfig from './config'
 const { networkId } = getConfig(process.env.NODE_ENV || 'development')
 import Single from "./pages/Single";
-import Test from "./pages/Test";
 //Uis 
 import Header from "./components/Header";
 import Home from "./pages/Home";
@@ -22,7 +21,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import Paper from '@mui/material/Paper';
 import { Person } from "@mui/icons-material";
 import { AddCircle } from "@mui/icons-material";
-import HomeIcon from '@mui/icons-material/BedroomBaby';
+import HomeIcon from '@mui/icons-material/Radar';
 import LoginBtn from "./components/LoginBtn";
 
 

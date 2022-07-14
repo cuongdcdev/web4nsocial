@@ -1,5 +1,5 @@
 // const CONTRACT_NAME = process.env.CONTRACT_NAME ||'nsocial'
-const CONTRACT_NAME = process.env.CONTRACT_NAME ||'dev-1653414782334-52370274257312'
+const CONTRACT_NAME = "web4social.testnet" || process.env.CONTRACT_NAME
 
 function getConfig(env) {
   switch (env) {

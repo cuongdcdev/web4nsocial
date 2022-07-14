@@ -45,8 +45,10 @@ h2 {
 }
 
 #loginBtn {
-  margin-top: 80%;
+  margin-top: 60%;
   padding: 50px;
+  display: block;
+  text-align: center;
 }
 
 #loginBtn button {
@@ -228,7 +230,7 @@ h1 {
 
 .cmtContent {
   font-size: 15px;
-  margin-bottom: 15px;
+  margin: 10px 0px;
 }
 
 a {
@@ -259,7 +261,17 @@ video {
   margin-bottom: 15px;
 }
 
+.single-title, .post-home-title{
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+}
 
+.single-desc, .post-home-desc{
+  color: black;
+  padding-top: 15px;
+  white-space: pre-wrap;
+}
 .comment-wrapper,
 .MuiDrawer-paperAnchorBottom,
 .comment-post {
@@ -277,6 +289,7 @@ video {
   padding-top: 75px;
   padding-bottom: 75px;
   max-width: 500px;
+  width:100%;
 }
 
 .post .MuiCardHeader-title {
@@ -349,10 +362,4 @@ video {
 
 .comment-post  button{
   transform:scale(1.5);
-}
-
-@media screen and ( min-width:800px ){
-  .comments-section #loginBtn button{
-  transform:scale(0.8);
-  }
 }

@@ -16,10 +16,9 @@ import { Drawer, InputBase } from "@mui/material";
 import { Close } from "@mui/icons-material";
 import { AddCircle } from "@mui/icons-material";
 import { v4 as uuid } from "uuid";
-import neariconimg from "../assets/img/nearicon.png";
 import DonateBox from "./DonateBox";
 import ShareBtn from "./ShareBtn";
-import { isFavorite, toggleFavorite } from "../utils";
+import { isFavorite, NEAR_ICON_IMG, toggleFavorite } from "../utils";
 import LoginBtn from "./LoginBtn";
 // import ReactWebMediaPlayer from 'react-web-media-player';
 
@@ -134,6 +133,7 @@ export default function PostCard(props) {
                 avatar={
                     <a href={`/@${post.author}`} title={post.author}>
                         <Avatar sx={{ bgcolor: red[500] }}>
+                        {post.author}
                         </Avatar>
                     </a>
                 }
@@ -166,7 +166,7 @@ export default function PostCard(props) {
                 </IconButton>
 
                 <IconButton className="donate-btn" aria-label="donate" onClick={openDonateSection}>
-                    <img src={neariconimg} />
+                    <img src={NEAR_ICON_IMG} />
                 </IconButton>
             </CardActions>
             {/* donate section   */}

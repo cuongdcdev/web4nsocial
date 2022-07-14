@@ -13,11 +13,10 @@ import { Avatar, Grid, Paper } from "@material-ui/core";
 import { InputBase } from "@mui/material";
 import { AddCircle } from "@mui/icons-material";
 import { v4 as uuid } from "uuid";
-import neariconimg from "../assets/img/nearicon.png";
 import DonateBox from "./DonateBox";
 import ShareBtn from "./ShareBtn";
 import LoginBtn from "./LoginBtn";
-import { toggleFavorite, isFavorite } from "../utils";
+import { toggleFavorite, isFavorite, NEAR_ICON_IMG } from "../utils";
 
 // import ReactWebMediaPlayer from 'react-web-media-player';
 
@@ -149,8 +148,7 @@ export default function SinglePost(props) {
                         </Avatar>
                     </a>
                 }
-
-                title={post.title}
+                title={post.author}
                 subheader={getDateFromTimeStamp(post.date)}
             />
 
@@ -158,9 +156,15 @@ export default function SinglePost(props) {
 
             <CardContent>
                 <Typography variant="body2" color="text.secondary">
-                    <a href={`/@${post.author}/p${post.id}`} >
+                    <div className="single-title">
+                        {post.title}
+                    </div>
+                </Typography>
+
+                <Typography variant="body2" color="text.secondary">
+                    <div className="single-desc">
                         {post.desc}
-                    </a>
+                    </div>
                 </Typography>
             </CardContent>
 
@@ -178,7 +182,7 @@ export default function SinglePost(props) {
                 </IconButton>
 
                 <IconButton className="donate-btn" aria-label="donate" onClick={openDonateSection}>
-                    <img src={neariconimg} />
+                    <img src={NEAR_ICON_IMG} />
                 </IconButton>
             </CardActions>
             {/* donate section   */}
@@ -216,9 +220,6 @@ export default function SinglePost(props) {
                         </Paper>
                     ))
                 }
-
-
-
 
             </div>
             {/* end comment section  */}
